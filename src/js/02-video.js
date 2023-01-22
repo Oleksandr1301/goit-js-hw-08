@@ -12,8 +12,5 @@ player.on(
   }, 1000)
 );
 
-player
-  .setCurrentTime(localStorage.getItem(CURRENT_TIME))
-  .catch(function (error) {
-    console.error(error);
-  });
+player.setCurrentTime(localStorage.getItem(CURRENT_TIME));
+  
