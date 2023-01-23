@@ -1,6 +1,9 @@
 import throttle from 'lodash.throttle';
 
+
+
 const MESSAGE_KEY = 'feedback-form-state';
+
 const refs = {
   form: document.querySelector('.feedback-form'),
   message: document.querySelector('textarea[name="message"]'),
@@ -8,7 +11,7 @@ const refs = {
 };
 
 refs.form.addEventListener('submit', onFormSubmit);
-refs.message.addEventListener('input', throttle(onTextareaInput, 500));
+refs.form.addEventListener('input', throttle(onTextareaInput, 500));
 populateTextarea();
 
 function onFormSubmit(e) {
